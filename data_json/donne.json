@@ -1,0 +1,17 @@
+{
+  
+  "habitudes": [
+    {
+      "nom": "Faire du sport",
+      "categorie": "Fitness",
+      "motivation": "Être en bonne santé",
+      "date_debut": "2024-04-06"
+    },
+    {
+      "nom": "Lire",
+      "categorie": "Culture",
+      "motivation": "Acquérir de nouvelles connaissances",
+      "date_debut": "2024-04-05"
+    }
+  ]
+}
