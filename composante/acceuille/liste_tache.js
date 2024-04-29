@@ -41,18 +41,60 @@ export default function Liste_tache() {
       <Modal animationType='slide' visible={open_modale1} transparent={true}>
         <View style={styles.modalContent}>
           <View style={styles.info}>
-              <Text style={styles.texte_const}>habitude</Text> 
-              <Text style={styles.nomff}>{data.habitudes[valeur_index].nom}</Text> 
+              <Text style={styles.texte_const}>habitude</Text>
+              <Text style={styles.nomff}>
+                 {(() => {
+                      try {
+                        return data.habitudes[valeur_index].nom ? data.habitudes[valeur_index].nom : null;
+                      } catch (error) {
+                        
+                        return null;
+                      }
+                })()}
+              </Text>
               <Text style={styles.texte_const}>Motivation</Text>
-              <Text style={styles.nomff}>{data.habitudes[valeur_index].motivation}</Text>
+              <Text style={styles.nomff}>{
+                 (() => {
+                  try {
+                    return data.habitudes[valeur_index].motivation ? data.habitudes[valeur_index].motivation : null;
+                  } catch (error) {
+                    
+                    return null;
+                  }
+              })()} 
+              </Text>
               <Text style={styles.texte_const}>Catégorie</Text>
-              <Text style={styles.nomff}>{data.habitudes[valeur_index].categorie}</Text>
+              <Text style={styles.nomff}>
+              {
+                 (() => {
+                  try {
+                    return data.habitudes[valeur_index].categorie? data.habitudes[valeur_index].categorie : null;
+                  } catch (error) { 
+                    return null;
+                  }
+              })()}   
+              </Text>
               <Text style={styles.texte_const}>heure de commencement</Text>
-              <Text style={styles.nomff}>{data.habitudes[valeur_index].heure_debut}</Text>
+              <Text style={styles.nomff}>{
+                  (() => {
+                   try {
+                     return data.habitudes[valeur_index].heure_debut? data.habitudes[valeur_index].heure_debut : null;
+                   } catch (error) { 
+                     return null;
+                   }
+               })()}  
+              </Text>
               <Text style={styles.texte_const}>Date de commencement</Text>
-              <Text style={styles.nomff}>{data.habitudes[valeur_index].date_debut}</Text> 
+              <Text style={styles.nomff}>{
+                (() => {
+                  try {
+                    return data.habitudes[valeur_index].date_debut? data.habitudes[valeur_index].date_debut : null;
+                  } catch (error) { 
+                    return null;
+                  }
+              })()}</Text>  
               <TouchableOpacity onPress={() => setopen_modale1(false)}>
-              <Text style={styles.closeButton}>Fermer</Text>
+                <Text style={styles.closeButton}>Fermer</Text>
               </TouchableOpacity>
           </View> 
         </View>
@@ -61,6 +103,18 @@ export default function Liste_tache() {
   );
 }
 /*
+<Text style={styles.nomff}>
+                {data.habitudes[valeur_index].nom ? data.habitudes[valeur_index].nom : null}
+              </Text>
+ <Text style={styles.texte_const}>Motivation</Text>
+              <Text style={styles.nomff}>{data.habitudes[valeur_index].motivation}</Text>
+              <Text style={styles.texte_const}>Catégorie</Text>
+              <Text style={styles.nomff}>{data.habitudes[valeur_index].categorie}</Text>
+              <Text style={styles.texte_const}>heure de commencement</Text>
+              <Text style={styles.nomff}>{data.habitudes[valeur_index].heure_debut}</Text>
+              <Text style={styles.texte_const}>Date de commencement</Text>
+              <Text style={styles.nomff}>{data.habitudes[valeur_index].date_debut}</Text> 
+
 <Text style={styles.nomff}>{data.habitudes[valeur_index].nom}</Text> 
               <Text style={styles.texte_const}>Motivation</Text>
               <Text style={styles.nomff}>{data.habitudes[valeur_index].motivation}</Text>

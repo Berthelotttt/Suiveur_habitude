@@ -159,19 +159,15 @@ export default function Bouton() {
                           </View> 
                         </Modal> 
                         
-                    </ScrollView>
-
-                    <View style={styles.buttonContainer}>
+              </ScrollView>
+                <View style={styles.buttonContainer}>
                           <Button title="Enregistrer" onPress={enregistrerInfo} /> 
-                    </View>
+                </View>
               </View>
-      
     </View>
           </Modal> 
         </View> 
-        
       )
-      
     }
 
 const styles = StyleSheet.create({
